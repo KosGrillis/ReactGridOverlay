@@ -1,0 +1,49 @@
+{
+  "name": "react-grid-overlay",
+  "version": "1.0.0",
+  "description": "Design your React apps to pixel perfection",
+  "main": "dist/index.js",
+  "umd:main": "dist/index.js",
+  "scripts": {
+    "clean": "rm -rf ./dist && cd ./example && rm -rf ./build",
+    "build": "npm run clean && tsc && npm run minify",
+    "lint": "tslint -c tslint.json --project tsconfig.json",
+    "prepare": "npm run lint && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npm run clean && webpack-dev-server --config example/webpack.config.js --mode production",
+    "minify": "uglifyjs --compress --mangle --source-map --output dist/index.js dist/index.js && uglifyjs --compress --mangle --source-map --output dist/style.js dist/style.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KosGrillis/react-grid-overlay.git"
+  },
+  "keywords": [],
+  "author": "Kos Grillis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KosGrillis/react-grid-overlay/issues"
+  },
+  "homepage": "https://github.com/KosGrillis/react-grid-overlay#readme",
+  "devDependencies": {
+    "@types/react": "^16.9.11",
+    "@types/react-dom": "^16.9.3",
+    "awesome-typescript-loader": "^5.2.1",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "tslib": "^1.10.0",
+    "tslint": "^5.19.0",
+    "tslint-config-airbnb": "^5.11.1",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-react": "^3.6.0",
+    "typescript": "^3.5.1",
+    "uglify-js": "^3.6.8",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "peerDependencies": {
+    "react": "16.x",
+    "react-dom": "16.x"
+  },
+  "typings": "dist/index"
+}
