@@ -1,6 +1,6 @@
 {
   "name": "react-grid-overlay",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Design your React apps to pixel perfection",
   "main": "dist/index.js",
   "umd:main": "dist/index.js",
